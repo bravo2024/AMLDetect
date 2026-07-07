@@ -1,13 +1,13 @@
 
 """train.py - build data, train, evaluate, persist."""
-from src.data import load_real_banknote
+from src.data import make_model_data
 from src.model import fit_and_evaluate
 from src.evaluate import save_metrics, print_report
 from src.persist import save_model
 
 def main():
-    print("Loading real dataset...")
-    data=load_real_banknote()
+    print("Simulating transactions...")
+    data=make_model_data(n=50_000)
     print("Training model...")
     model,metrics=fit_and_evaluate(data)
     save_model(model); save_metrics(metrics); print_report(metrics)
