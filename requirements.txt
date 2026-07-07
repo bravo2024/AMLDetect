@@ -1,0 +1,9 @@
+# --- core (pinned, required to run) ---
+numpy>=1.26
+pandas>=2.0
+streamlit>=1.28
+matplotlib>=3.7
+pytest>=7.0
+
+# --- optional: production-grade upgrades (uncomment to enable) ---
+lightgbm>=4.0
